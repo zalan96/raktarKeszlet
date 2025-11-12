@@ -9,14 +9,16 @@
     <Grid Margin="12">
 		<StackPanel>
 			<WrapPanel>
-				<TextBlock Text="Termék neve:" Margin="10"/>
-				<TextBox x:Name="termekNev" Width="200" Height="25" Margin="10"/>
-				<TextBlock Text="Mennyiség:" Margin="10"/>
-				<TextBox x:Name="mennyiseg" Width="50" Height="20" Margin="10"/>
-				<TextBlock Text="Egységár:" Margin="10"/>
+				<TextBlock Text="Termék neve:" Margin="15"/>
+				<TextBox x:Name="termekNev" Width="200" Height="25"/>
+				<TextBlock Text="Mennyiség:" Margin="15"/>
+				<TextBox x:Name="mennyiseg" Width="40" Height="20"/>
+				<TextBlock Text="Egységár:" Margin="15"/>
 				<TextBox x:Name="egysegar" Width="70" Height="25" Margin="10"/>
-				<Button x:Name="hozzaadBtn" Content="Hozzáadás" Width="100" Height="30" Margin="10" Click="hozzaadBtn_Click"/>
-				<Button x:Name="törlés" Content="Törlés" Width="100" Height="30" Margin="10" Click="torlesBtn_Click"/>
+			</WrapPanel>
+			<WrapPanel>
+				<Button x:Name="hozzaadBtn" Content="Hozzáadás" Width="365" Height="30" Margin="10" Click="hozzaadBtn_Click"/>
+				<Button x:Name="törlés" Content="Törlés" Width="366" Height="30" Margin="10" Click="torlesBtn_Click"/>
 			</WrapPanel>
 			<WrapPanel>
 				<ListBox x:Name="termekLista" Width="760" Height="250" Margin="10"/>
@@ -24,7 +26,8 @@
 			<WrapPanel>
 				<Button x:Name="mentesBtn" Content="Mentés fájlba" Click="mentesBtn_Click" Margin="10"/>
 				<Button x:Name="betoltesBtn" Content="Betöltés fájlból" Click="betoltesBtn_Click" Margin="10"/>
-				<Label Name="osszesDbLabel" Content="Összes termék darabszáma: 0 db"/>
+				<Label>Összes termék darabszáma:</Label>
+				<Label x:Name="osszDarab">0</Label>
 			</WrapPanel>
 		</StackPanel>
     </Grid>

@@ -10,7 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes; 
+using System.Windows.Shapes;
 
 namespace raktarKeszlet
 {
@@ -72,7 +72,7 @@ namespace raktarKeszlet
 			if (result != MessageBoxResult.Yes)
 				return;
 			termekLista.Items.Remove(termekLista.SelectedItem);
-			
+
 		}
 
 		private void mentesBtn_Click(object sender, RoutedEventArgs e)
@@ -116,7 +116,7 @@ namespace raktarKeszlet
 				MessageBox.Show($"Betöltési hiba: {ex.Message}", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
-		private void FrissitOsszesDbLabel()
+		private void frissitOssz()
 		{
 			int osszesDb = 0;
 			foreach (var item in termekLista.Items)
@@ -132,7 +132,6 @@ namespace raktarKeszlet
 					}
 				}
 			}
-			osszesDbLabel.Content = $"Összes termék darabszáma: {osszesDb} db";
 		}
 	}
 }
