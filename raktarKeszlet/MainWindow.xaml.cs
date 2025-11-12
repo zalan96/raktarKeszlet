@@ -74,5 +74,10 @@ namespace raktarKeszlet
 			termekLista.Items.Remove(termekLista.SelectedItem);
 			
 		}
+
+		private void mentesBtn_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

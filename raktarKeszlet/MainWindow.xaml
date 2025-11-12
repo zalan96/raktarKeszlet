@@ -19,7 +19,11 @@
 				<Button x:Name="törlés" Content="Törlés" Width="100" Height="30" Margin="10" Click="torlesBtn_Click"/>
 			</WrapPanel>
 			<WrapPanel>
-				<ListBox x:Name="termekLista" Width="760" Height="300" Margin="10"/>
+				<ListBox x:Name="termekLista" Width="760" Height="250" Margin="10"/>
+			</WrapPanel>
+			<WrapPanel>
+				<Button x:Name="mentesBtn" Content="Mentés fájlba" Click="mentesBtn_Click" Margin="10"/>
+				<Button x:Name="betoltesBtn" Content="Betöltés fájlból" Click="betoltesBtn_Click" Margin="10"/>
 			</WrapPanel>
 		</StackPanel>
     </Grid>
