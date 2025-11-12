@@ -38,7 +38,7 @@ namespace raktarKeszlet
 				MessageBox.Show("A darabszámnak pozitív egész számnak kell lennie.", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
 				return;
 			}
-			if (!decimal.TryParse(egysegar.Text.Trim(), NumberStyles.Number, CultureInfo.CurrentCulture, out decimal ar))
+			if (!decimal.TryParse(egysegar.Text.Trim(), NumberStyles.Number, CultureInfo.CurrentCulture, out decimal ar)  || ar < 1)
 			{
 				MessageBox.Show("Az árnak számnak kell lennie.", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
 				return;

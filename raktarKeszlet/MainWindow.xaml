@@ -17,8 +17,8 @@
 				<TextBox x:Name="egysegar" Width="70" Height="25" Margin="10"/>
 			</WrapPanel>
 			<WrapPanel>
-				<Button x:Name="hozzaadBtn" Content="Hozzáadás" Width="365" Height="30" Margin="10" Click="hozzaadBtn_Click"/>
-				<Button x:Name="törlés" Content="Törlés" Width="366" Height="30" Margin="10" Click="torlesBtn_Click"/>
+				<Button x:Name="hozzaadBtn" Content="Hozzáadás" Width="360" Height="30" Margin="10" Click="hozzaadBtn_Click"/>
+				<Button x:Name="törlés" Content="Törlés" Width="360" Height="30" Margin="10" Click="torlesBtn_Click"/>
 			</WrapPanel>
 			<WrapPanel>
 				<ListBox x:Name="termekLista" Width="760" Height="250" Margin="10"/>
