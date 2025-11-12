@@ -16,6 +16,7 @@
 				<TextBlock Text="Egységár:" Margin="10"/>
 				<TextBox x:Name="egysegar" Width="70" Height="25" Margin="10"/>
 				<Button x:Name="hozzaadBtn" Content="Hozzáadás" Width="100" Height="30" Margin="10" Click="hozzaadBtn_Click"/>
+				<Button x:Name="törlés" Content="Törlés" Width="100" Height="30" Margin="10" Click="torlesBtn_Click"/>
 			</WrapPanel>
 			<WrapPanel>
 				<ListBox x:Name="termekLista" Width="760" Height="300" Margin="10"/>
