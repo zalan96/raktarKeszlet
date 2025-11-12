@@ -77,7 +77,62 @@ namespace raktarKeszlet
 
 		private void mentesBtn_Click(object sender, RoutedEventArgs e)
 		{
+			try
+			{
+				var sorok = new List<string>();
+				foreach (var item in termekLista.Items)
+				{
+					sorok.Add(item.ToString());
+				}
+				File.WriteAllLines(filepath, sorok, Encoding.UTF8);
+				MessageBox.Show("Mentés sikeres!", "Mentés", MessageBoxButton.OK, MessageBoxImage.Information);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"Mentési hiba: {ex.Message}", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
+		}
 
+		private void betoltesBtn_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				termekLista.Items.Clear();
+				if (File.Exists(filepath))
+				{
+					var sorok = File.ReadAllLines(filepath, Encoding.UTF8);
+					foreach (var sor in sorok)
+					{
+						termekLista.Items.Add(sor);
+					}
+				}
+				else
+				{
+					MessageBox.Show("A fájl nem található.", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"Betöltési hiba: {ex.Message}", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
+		}
+		private void FrissitOsszesDbLabel()
+		{
+			int osszesDb = 0;
+			foreach (var item in termekLista.Items)
+			{
+				var parts = item.ToString().Split('-');
+				if (parts.Length >= 2)
+				{
+					string dbResz = parts[1];
+					string szamResz = dbResz.Replace("Ft", "").Trim();
+					if (int.TryParse(szamResz, out int db))
+					{
+						osszesDb += db;
+					}
+				}
+			}
+			osszesDbLabel.Content = $"Összes termék darabszáma: {osszesDb} db";
 		}
 	}
 }
