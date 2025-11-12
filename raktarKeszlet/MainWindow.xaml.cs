@@ -28,7 +28,7 @@ namespace raktarKeszlet
 		{
 			if (string.IsNullOrWhiteSpace(termekNev?.Text) ||
 				string.IsNullOrWhiteSpace(mennyiseg?.Text) ||
-				string.IsNullOrWhiteSpace(egysegar?.Text))
+				string.IsNullOrWhiteSpace(egysegar?.Text)) 
 			{
 				MessageBox.Show("Kérlek tölts ki minden mezőt.", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
 				return;
